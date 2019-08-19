@@ -47,10 +47,3 @@ steps:
     azureSubscription: 'karan3194'
     scriptLocation: inlineScript
     inlineScript: 'az ml model deploy -n acicicd -f model.json --ic inferenceConfig.yml --dc deploymentConfig.yml --overwrite'
-
-- task: AzureCLI@1
-  displayName: 'Delete deployed service'
-  inputs:
-    azureSubscription: 'karan3194'
-    scriptLocation: inlineScript
-    inlineScript: 'az ml service delete -n acicicd'
